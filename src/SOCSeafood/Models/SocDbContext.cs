@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SOCSeafood.Models;
 
 namespace SOCSeafood.Models
 {
@@ -13,6 +14,8 @@ namespace SOCSeafood.Models
         {
 
         }
+        public virtual DbSet<Newsletter> NewsLetters { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SocSeafood;integrated security=True");

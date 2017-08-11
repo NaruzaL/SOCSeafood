@@ -172,6 +172,26 @@ namespace SOCSeafood.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("SOCSeafood.Models.Newsletter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Interest");
+
+                    b.Property<bool>("IsSignedUp");
+
+                    b.Property<DateTime>("SubscribeDate");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("NewsletterSubscribers");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole")
@@ -207,6 +227,13 @@ namespace SOCSeafood.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("SOCSeafood.Models.Newsletter", b =>
+                {
+                    b.HasOne("SOCSeafood.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
         }
     }
