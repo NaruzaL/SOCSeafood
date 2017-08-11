@@ -6,23 +6,24 @@
 <div id="subEdit">
     <h2>Edit</h2>
     <hr />
+    <div class="table">
+        @using (Html.BeginForm())
+        {
 
-    @using (Html.BeginForm())
-    {
 
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.IsSignedUp)
+            @Html.HiddenFor(model => model.SubscribeDate)
 
-        @Html.HiddenFor(model => model.Id)
-        @Html.HiddenFor(model => model.IsSignedUp)
-        @Html.HiddenFor(model => model.SubscribeDate)
+            <p>@Html.LabelFor(model => model.Email)</p>
+            <p>@Html.EditorFor(model => model.Email)</p>
 
-        <p>@Html.LabelFor(model => model.Email)</p>
-        <p>@Html.EditorFor(model => model.Email)</p>
+            <p>@Html.LabelFor(model => model.Interest)</p>
+            <p>@Html.EditorFor(model => model.Interest)</p>
 
-        <p>@Html.LabelFor(model => model.Interest)</p>
-        <p>@Html.EditorFor(model => model.Interest)</p>
+            <input type="submit" value="Save" />
 
-        <input type="submit" value="Save" />
-
-    }
-    <p>@Html.ActionLink("Home", "Index")</p>
+        }
+        <p>@Html.ActionLink("Account Home", "Index")</p>
+    </div>
 </div>

@@ -16,7 +16,7 @@
                 <li>@Html.DisplayFor(model => newsletter.Email)</li>
                 <li>@Html.ActionLink("Edit", "Edit", new { id = newsletter.Id })</li>
                 <li>@Html.ActionLink("Details", "Details", new { id = newsletter.Id })</li>
-                <li>@Html.ActionLink("Delete", "Delete", new { id = newsletter.Id })</li>
+                <li>@Html.ActionLink("Unsubscribe", "Delete", new { id = newsletter.Id })</li>
                 <li>@Html.ActionLink("View all subscribers", "List")</li>
             }
         </ul>
@@ -24,7 +24,9 @@
 
     else
     {
-        <p>You haven't subscribed to our news letter yet</p>
-        @Html.ActionLink("Sign up for our newsletter", "Signup")
+        <div class="table">
+            <p>You haven't subscribed to our news letter yet</p>
+            @Html.ActionLink("Sign up for our newsletter", "Signup")
+        </div>
     }
 </div>
