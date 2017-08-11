@@ -39,6 +39,10 @@ namespace SOCSeafood.Controllers
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             newsletter.User = currentUser;
+            DateTime timestamp = DateTime.Now;
+            newsletter.SubscribeDate = timestamp;
+            newsletter.Email = currentUser.UserName;
+            newsletter.IsSignedUp = true;
             _db.Newsletters.Add(newsletter);
             _db.SaveChanges();
             return RedirectToAction("Index");
