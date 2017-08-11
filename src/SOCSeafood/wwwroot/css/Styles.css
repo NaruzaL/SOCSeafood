@@ -1,2 +1,71 @@
-﻿body {
+﻿html {
+    height: 100%;
+}
+
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-top: 50px solid black;
+    border-left: 50px solid black;
+    border-right: 50px solid black;
+    min-height: 100%;
+    font-family: 'Faustina', serif;
+    color: black;
+    font-size:22px;
+}
+
+ul {
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.50);
+    font-family: 'Faustina', serif;
+}
+
+#tbl {
+    font-size: 42px;
+    text-align: center;
+    font-family: 'Faustina', serif;
+}
+#layoutnav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: 'Faustina', serif;
+}
+.about {
+    margin-left: 37%;
+    margin-right: 8%;
+    font-size: 30px;
+}
+.admin {
+    margin-right: 33%;
+     font-size: 30px;
+}
+.SOC {
+    font-size: 60px;
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+img {
+    height: 200px;
+}
+
+#intro, #testimonials, #testimonials2, #subSign, #subEdit, #subList, #subDetails, #subInd, #subDel {
+     background-color: rgba(255, 255, 255, 0.50);
+     font-family: 'Faustina', serif;
+     color: black;
+     text-align: center;
+}
+
+.admn {
+     background-color: rgba(255, 255, 255, 0.50);
+     font-family: 'Faustina', serif;
+     color: black;
+     font-size: 20px;
+     text-align: center;
+}
+
+#supper {
+   float:right;
 }

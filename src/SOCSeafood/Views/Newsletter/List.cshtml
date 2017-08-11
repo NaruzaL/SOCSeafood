@@ -5,23 +5,23 @@
 
 @model IEnumerable<SOCSeafood.Models.Newsletter>
 
-
 <hr />
+<div id="subList">
+    @Html.ActionLink("Account home", "Index")
+    @if (Model.Any())
+    {
+        <h2>Newsletter subscribers:</h2>
+        <ul>
+            @foreach (var newsletter in Model)
+            {
+                <li>@Html.DisplayFor(model => newsletter.Email)</li>
+            }
+        </ul>
+    }
 
-@if (Model.Any())
-{
-    <ul>
-        @foreach (var newsletter in Model)
-        {
-            <li>@Html.DisplayFor(model => newsletter.Email)</li>
-        }
-    </ul>
-}
+    else
+    {
+        <p>No subscriptions yet</p>
 
-else
-{
-    <p>No subscriptions yet</p>
-
-}
-@Html.ActionLink("About us", "Index", "Home")
-@Html.ActionLink("Home", "Index")
+    }
+</div>

@@ -5,19 +5,21 @@
 
 @using System.Security.Claims
 
-<h2>Welcome to Son of Cod Seafood</h2>
-<hr />
-@if (User.Identity.IsAuthenticated)
-{
-    <p>Hello @User.Identity.Name!</p>
-    @using (Html.BeginForm("LogOff", "Account"))
+<div class="admn">
+    <hr />
+    @if (User.Identity.IsAuthenticated)
     {
-        <input type="submit" class="btn btn-info" value="Log out" />
+        <p>Hello @User.Identity.Name!</p>
+        @Html.ActionLink("Newsletter info", "Index", "Newsletter")
+        <hr/>
+        @using (Html.BeginForm("LogOff", "Account"))
+        {
+            <input type="submit" class="btn btn-info" value="Log out" />
+        }
     }
-    @Html.ActionLink("Newsletter info", "Index", "Newsletter")
-}
-else
-{
-    <p>@Html.ActionLink("Register", "Register")</p>
-    <p>@Html.ActionLink("Log in", "Login")</p>
-}
+    else
+    {
+        <p>@Html.ActionLink("Register", "Register")</p>
+        <p>@Html.ActionLink("Log in", "Login")</p>
+    }
+</div>

@@ -4,28 +4,27 @@
 }
 
 @model IEnumerable<SOCSeafood.Models.Newsletter>
+<div id="subInd">
+    <h2>Welcome, @User.Identity.Name</h2>
+    <hr />
 
-<h2>Welcome, @User.Identity.Name</h2>
-<hr />
+    @if (Model.Any())
+    {
+        <ul>
+            @foreach (var newsletter in Model)
+            {
+                <li>@Html.DisplayFor(model => newsletter.Email)</li>
+                <li>@Html.ActionLink("Edit", "Edit", new { id = newsletter.Id })</li>
+                <li>@Html.ActionLink("Details", "Details", new { id = newsletter.Id })</li>
+                <li>@Html.ActionLink("Delete", "Delete", new { id = newsletter.Id })</li>
+                <li>@Html.ActionLink("View all subscribers", "List")</li>
+            }
+        </ul>
+    }
 
-@if (Model.Any())
-{
-    <ul>
-        @foreach (var newsletter in Model)
-        {
-            <li>@Html.DisplayFor(model => newsletter.Email)</li>
-            <li>@Html.DisplayFor(model => newsletter.IsSignedUp)</li>
-            <li>@Html.ActionLink("Edit", "Edit", new { id = newsletter.Id })</li>
-            <li>@Html.ActionLink("Details", "Details", new { id = newsletter.Id })</li>
-            <li>@Html.ActionLink("Delete", "Delete", new { id = newsletter.Id })</li>
-            <li>@Html.ActionLink("View all subscribers", "List")</li>
-        }
-    </ul>
-}
-
-else
-{
-    <p>You haven't subscribed to our news letter yet</p>
-@Html.ActionLink("Sign up for our newsletter", "Signup")
-}
-@Html.ActionLink("About us", "Index", "Home")
+    else
+    {
+        <p>You haven't subscribed to our news letter yet</p>
+        @Html.ActionLink("Sign up for our newsletter", "Signup")
+    }
+</div>

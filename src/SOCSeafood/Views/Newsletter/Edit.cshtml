@@ -3,14 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model SOCSeafood.Models.Newsletter
+<div id="subEdit">
+    <h2>Edit</h2>
+    <hr />
 
-<h2>Edit</h2>
-<hr />
+    @using (Html.BeginForm())
+    {
 
-@using (Html.BeginForm())
-{
-    <div id="subEdit">
-        
+
         @Html.HiddenFor(model => model.Id)
         @Html.HiddenFor(model => model.IsSignedUp)
         @Html.HiddenFor(model => model.SubscribeDate)
@@ -23,7 +23,6 @@
 
         <input type="submit" value="Save" />
 
-    </div>
-}
-<p>@Html.ActionLink("Home", "Index")</p>
-<p>@Html.ActionLink("About us", "Index", "Home")</p>
+    }
+    <p>@Html.ActionLink("Home", "Index")</p>
+</div>

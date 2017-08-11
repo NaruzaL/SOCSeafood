@@ -3,15 +3,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model SOCSeafood.Models.Newsletter
+<div id="subSign">
+    <h2>Newsletter sign up</h2>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <h3>Please give us an idea of your specific interests</h3>
+        @Html.EditorFor(model => model.Interest)
 
-<h2>Newsletter sign up</h2>
-<hr />
-@using (Html.BeginForm())
-{
-    <h3>Please give us an idea of your specific interests</h3>
-    @Html.EditorFor(model => model.Interest)
 
-
-    <input type="submit" value="Signup" />
-}
-@Html.ActionLink("Change your mind?", "Index")
+        <input type="submit" value="Signup" />
+    }
+    @Html.ActionLink("Change your mind?", "Index")
+</div>

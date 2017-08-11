@@ -1,13 +1,41 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SOC Seafood</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Faustina" rel="stylesheet">
+
+
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
 </head>
 <body>
-    <div>
+    <header>
+        <div id="tbl">
+                <h2><span class="SOC">Son of Cod Seafood</span></h2>
+            <div id ="layoutnav">
+                <span class="about">@Html.ActionLink("About us", "Index", "Home")</span>
+                <span class="admin">@Html.ActionLink("Login/Register", "Index", "Account")</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container body-content">
         @RenderBody()
+        <hr />
+        <footer></footer>
     </div>
+
 </body>
 </html>

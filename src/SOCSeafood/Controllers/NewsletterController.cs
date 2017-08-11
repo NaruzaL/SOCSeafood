@@ -21,7 +21,7 @@ namespace SOCSeafood.Controllers
             _userManager = userManager;
             _db = db;
         }
-
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
