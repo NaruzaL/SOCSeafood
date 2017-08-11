@@ -14,7 +14,7 @@ namespace SOCSeafood.Models
         {
 
         }
-        public virtual DbSet<Newsletter> NewsLetters { get; set; }
+        public virtual DbSet<Newsletter> Newsletters { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

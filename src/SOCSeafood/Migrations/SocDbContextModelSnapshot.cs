@@ -177,6 +177,8 @@ namespace SOCSeafood.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Email");
+
                     b.Property<string>("Interest");
 
                     b.Property<bool>("IsSignedUp");

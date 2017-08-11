@@ -1,5 +1,17 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model SOCSeafood.Models.Newsletter
+
+<h2>Newsletter sign up</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    <h3>Please give us an idea of your specific interests</h3>
+    @Html.EditorFor(model => model.Interest)
+
+
+    <input type="submit" value="Signup" />
+}
+@Html.ActionLink("Home", "Index")

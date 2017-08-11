@@ -8,7 +8,7 @@ using SOCSeafood.Models;
 namespace SOCSeafood.Migrations
 {
     [DbContext(typeof(SocDbContext))]
-    [Migration("20170811162402_Initial")]
+    [Migration("20170811170656_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -177,6 +177,8 @@ namespace SOCSeafood.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Email");
 
                     b.Property<string>("Interest");
 

@@ -3,8 +3,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using System.Security.Claims
+@model IEnumerable<SOCSeafood.Models.Newsletter>
 
-<h2>Hello, @User.Identity.Name</h2>
+<h2>Welcome, @User.Identity.Name</h2>
 <hr />
-@Html.ActionLink("Sign up for our newsletter", "Create")
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var newsletter in Model)
+        {
+            <li>@Html.DisplayFor(model => newsletter.Interest)</li>
+        }
+    </ul>
+}
+
+else
+{
+    <p>You haven't subscribed to our news letter yet</p>
+}
+
+@Html.ActionLink("Sign up for our newsletter", "Signup")

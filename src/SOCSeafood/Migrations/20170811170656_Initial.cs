@@ -154,6 +154,7 @@ namespace SOCSeafood.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Email = table.Column<string>(nullable: true),
                     Interest = table.Column<string>(nullable: true),
                     IsSignedUp = table.Column<bool>(nullable: false),
                     SubscribeDate = table.Column<DateTime>(nullable: false),
