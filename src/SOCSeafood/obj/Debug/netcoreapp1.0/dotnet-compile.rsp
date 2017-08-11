@@ -1,5 +1,5 @@
---temp-output:c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\obj\Debug\netcoreapp1.0\
---out:c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\bin\Debug\netcoreapp1.0\SOCSeafood.dll
+--temp-output:C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\obj\Debug\netcoreapp1.0\
+--out:C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\bin\Debug\netcoreapp1.0\SOCSeafood.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -199,17 +199,17 @@
 --reference:C:\Users\pdlaz\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\pdlaz\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\pdlaz\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\obj\Debug\netcoreapp1.0\SOCSeafooddotnet-compile.deps.json",SOCSeafood.deps.json
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Program.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Startup.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Controllers\AccountController.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Controllers\HomeController.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Controllers\NewsletterController.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Migrations\20170811170656_Initial.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Migrations\20170811170656_Initial.Designer.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Migrations\SocDbContextModelSnapshot.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Models\ApplicationUser.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Models\Newsletter.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\Models\SocDbContext.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\ViewModels\LoginViewModel.cs
-c:\users\pdlaz\onedrive\documents\visual studio 2015\Projects\SOCSeafood\src\SOCSeafood\ViewModels\RegisterViewModel.cs
+--resource:"C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\obj\Debug\netcoreapp1.0\SOCSeafooddotnet-compile.deps.json",SOCSeafood.deps.json
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Program.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Startup.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Controllers\AccountController.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Controllers\HomeController.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Controllers\NewsletterController.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Migrations\20170811170656_Initial.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Migrations\20170811170656_Initial.Designer.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Migrations\SocDbContextModelSnapshot.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Models\ApplicationUser.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Models\Newsletter.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\Models\SocDbContext.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\ViewModels\LoginViewModel.cs
+C:\Users\pdlaz\OneDrive\Documents\Visual Studio 2015\Projects\SOCSeafood\src\SOCSeafood\ViewModels\RegisterViewModel.cs

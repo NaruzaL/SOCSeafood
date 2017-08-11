@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Edit Subscription Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model SOCSeafood.Models.Newsletter
+
+<h2>Edit</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <div id="subEdit">
+        
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.IsSignedUp)
+        @Html.HiddenFor(model => model.SubscribeDate)
+
+        <p>@Html.LabelFor(model => model.Email)</p>
+        <p>@Html.EditorFor(model => model.Email)</p>
+
+        <p>@Html.LabelFor(model => model.Interest)</p>
+        <p>@Html.EditorFor(model => model.Interest)</p>
+
+        <input type="submit" value="Save" />
+
+    </div>
+}
+<p>@Html.ActionLink("Home", "Index")</p>
+<p>@Html.ActionLink("About us", "Index", "Home")</p>

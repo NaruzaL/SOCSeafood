@@ -1,5 +1,15 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Newsletter Subscription Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model SOCSeafood.Models.Newsletter
+
+<h2>Newsletter subscription information:</h2>
+<ul>
+    <li>Email: @Html.DisplayFor(model => model.Email)</li>
+    <li>Specified Interest: @Html.DisplayFor(model => model.Interest)</li>
+    <li>Subscription Date:@Html.DisplayFor(model => model.SubscribeDate)</li>
+    <li>Subscribed: @Html.DisplayFor(model => model.IsSignedUp)</li>
+</ul>
+<p>@Html.ActionLink("Home", "Index")</p>
+<p>@Html.ActionLink("About us", "Index", "Home")</p>

@@ -8,7 +8,7 @@ namespace SOC.Tests.ControllerTests
     public class HomeControllerTest
     {
         [Fact]
-        public void Get_ViewResult_Signup_Test()
+        public void Get_ViewResult_Index_Test()
         {
             //Arrange
             HomeController controller = new HomeController();
@@ -19,5 +19,6 @@ namespace SOC.Tests.ControllerTests
             //Assert
             Assert.IsType<ViewResult>(result);
         }
+
     }
 }

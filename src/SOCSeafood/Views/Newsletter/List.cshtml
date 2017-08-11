@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "All Newsletter Subscribers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<SOCSeafood.Models.Newsletter>
+
+
+<hr />
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var newsletter in Model)
+        {
+            <li>@Html.DisplayFor(model => newsletter.Email)</li>
+        }
+    </ul>
+}
+
+else
+{
+    <p>No subscriptions yet</p>
+
+}
+@Html.ActionLink("About us", "Index", "Home")
+@Html.ActionLink("Home", "Index")

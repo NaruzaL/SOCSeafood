@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using SOCSeafood.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace SOCSeafood.Controllers
 {
@@ -28,6 +29,11 @@ namespace SOCSeafood.Controllers
             return View(_db.Newsletters.Where(x => x.User.Id == currentUser.Id));
         }
 
+        public IActionResult List()
+        {
+            return View(_db.Newsletters.ToList());
+        }
+
         public IActionResult Signup()
         {
             return View();
@@ -44,6 +50,38 @@ namespace SOCSeafood.Controllers
             newsletter.Email = currentUser.UserName;
             newsletter.IsSignedUp = true;
             _db.Newsletters.Add(newsletter);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Details(int id)
+        {
+            var thisNewsletter = _db.Newsletters.FirstOrDefault(Newsletter => Newsletter.Id == id);
+            return View(thisNewsletter);
+        }
+        public IActionResult Edit(int id)
+        {
+            var thisNewsletter = _db.Newsletters.FirstOrDefault(Newsletters => Newsletters.Id == id);
+            return View(thisNewsletter);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Newsletter newsletter)
+        {
+            _db.Entry(newsletter).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Delete(int id)
+        {
+            var thisNewsletter = _db.Newsletters.FirstOrDefault(Newsletters => Newsletters.Id == id);
+            return View(thisNewsletter);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisNewsletter = _db.Newsletters.FirstOrDefault(Newsletters => Newsletters.Id == id);
+            _db.Newsletters.Remove(thisNewsletter);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
